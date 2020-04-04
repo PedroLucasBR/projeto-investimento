@@ -21,12 +21,15 @@ void main() {
     ),
   );
 
-  var retornoConservador =
-      calculador.calculaRetorno(investimento, conservador).toStringAsFixed(2);
-  var retornoModerado =
-      calculador.calculaRetorno(investimento, moderado).toStringAsFixed(2);
-  var retornoAgressivo =
-      calculador.calculaRetorno(investimento, agressivo).toStringAsFixed(2);
+  var retornoConservador = calculador
+      .calculaRetorno(investimento: investimento, perfil: conservador)
+      .toStringAsFixed(2);
+  var retornoModerado = calculador
+      .calculaRetorno(investimento: investimento, perfil: moderado)
+      .toStringAsFixed(2);
+  var retornoAgressivo = calculador
+      .calculaRetorno(investimento: investimento, perfil: agressivo)
+      .toStringAsFixed(2);
 
   print('Retorno conservador: R\$$retornoConservador');
   print('Retorno moderado: R\$$retornoModerado');
